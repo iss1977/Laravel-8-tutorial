@@ -30,8 +30,11 @@ Route::get('/', function () {
 });
 
 // old type definition :
-Route::get('/users',[UsersController::class,'loadView']);
+//Route::get('/users',[UsersController::class,'viewLoad']);
 
+
+Route::post('users',[UsersController::class, 'getData']);
+Route::view("login",'users');
 
 // Route::get('/users','UsersController@loadView');
 
